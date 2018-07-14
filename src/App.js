@@ -12,6 +12,7 @@ class App extends React.Component {
     country: undefined,
     humidity: undefined,
     description: undefined,
+    icon: undefined,
     error: undefined
   }
 
@@ -28,6 +29,7 @@ class App extends React.Component {
         city: data.name,
         country: data.sys.country,
         humidity: data.main.humidity,
+        icon: data.weather[0].icon,
         description: data.weather[0].description,
         error: ""
       });
@@ -37,6 +39,7 @@ class App extends React.Component {
         city: undefined,
         country: undefined,
         humidity: undefined,
+        icon: undefined,
         description: undefined,
         error: "Please enter the value"
       });
@@ -53,6 +56,7 @@ class App extends React.Component {
         city={this.state.city}
         country={this.state.country}
         humidity={this.state.humidity}
+        icon={this.state.icon}
         description={this.state.description}
         error={this.state.error}
         />
